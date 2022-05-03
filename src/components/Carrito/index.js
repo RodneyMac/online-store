@@ -22,7 +22,7 @@ const resta = id => {
         if(item.id === id) {
             item.cantidad === 1 ? item.cantidad = 1 : item.cantidad -= 1;
         }
-        setCarrito([...carrito])
+        setCarrito([...carrito]);
     })
 }
 
@@ -31,7 +31,7 @@ const suma = id => {
         if(item.id === id) {
             item.cantidad += 1;
         }
-        setCarrito([...carrito])
+        setCarrito([...carrito]);
     })
 }
 
@@ -66,7 +66,7 @@ const removeProducto = id => {
                         <div>
                             <box-icon name="up-arrow" type="solid" onClick={() => suma(producto.id)}></box-icon>
                             <p className='cantidad'>{producto.cantidad}</p>
-                            <box-icon name="down-arrow" type="solid" onclick={() => resta(producto.id)}></box-icon>
+                            <box-icon name="down-arrow" type="solid" onClick={() => resta(producto.id)}></box-icon>
                         </div>
                         <div className='remove-item' onClick={() => removeProducto(producto.id)}>
                             <box-icon name="trash"></box-icon>
